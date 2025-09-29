@@ -1,5 +1,5 @@
 import { getEvents } from '@/lib/api'
-import type { Event, EventsResponse, EventSeverity, EventStatus } from '@/types/events'
+import type { Event, EventsResponse, EventSeverity, EventStatus } from '@/app/types/events'
 
 // Helper function to format dates
 function formatDateTime(dateString: string): string {
