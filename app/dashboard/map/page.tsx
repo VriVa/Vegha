@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+
+
 import { getJunctions, getJunctionStatus, getPredictions, getMapEvents } from '@/lib/api'
 import type { Junction, JunctionStatus, Prediction, MapEvent } from './MapView'
 import MapClientWrapper from './MapClientWrapper'
@@ -86,5 +89,3 @@ export default async function MapPage() {
   }
 }
 
-// Enable static generation for better performance
-export const dynamic = 'force-dynamic' // This ensures fresh data on each request
