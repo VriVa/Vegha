@@ -1,3 +1,4 @@
+import type { MapEvent } from '../dashboard/map/MapView'
 export interface EventLocation {
   junction_id?: string
   route_id?: string
@@ -38,6 +39,12 @@ export interface Event {
 
 export interface EventsResponse {
   events: Event[]
+  total_count: number
+  active_count: number
+  timestamp: string
+}
+export interface MapEventsResponse {
+  events: MapEvent[]
   total_count: number
   active_count: number
   timestamp: string

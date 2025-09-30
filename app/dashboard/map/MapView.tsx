@@ -31,8 +31,8 @@ export interface Prediction {
   expected_wait_time_sec: number
 }
 
-export interface Event {
-  id: number
+export interface MapEvent {
+  id: string
   location: { lat: number; lng: number }
   title: string
   severity: 'low' | 'medium' | 'high' | 'critical'
@@ -44,7 +44,7 @@ interface MapViewProps {
   junctions: Junction[]
   junctionStatuses: JunctionStatus[]
   predictions: Prediction[]
-  events: Event[]
+  events: MapEvent[]
 }
 
 // Helper functions for colors and styling

@@ -1,4 +1,4 @@
-import type { EventsResponse } from '@/app/types/events'
+import type { EventsResponse,MapEventsResponse } from '@/app/types/events'
 // Types for the dashboard data
 export interface DashboardData {
   system_status: 'operational' | 'warning' | 'critical'
@@ -99,6 +99,7 @@ export const getPredictions = (): Promise<PredictionsData> => fetchData("predict
 // Events
 // In your existing lib/api.ts, make sure getEvents returns the full response
 export const getEvents = (): Promise<EventsResponse> => fetchData("events.json");
+export const getMapEvents = (): Promise<MapEventsResponse> => fetchData("mapevents.json");
 
 // Helper function to format wait time
 export function formatWaitTime(seconds: number): string {

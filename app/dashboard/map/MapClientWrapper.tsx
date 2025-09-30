@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import type { Junction, JunctionStatus, Prediction, Event } from './MapView'
+import type { Junction, JunctionStatus, Prediction, MapEvent } from './MapView'
 
 // Dynamically import MapView with SSR disabled to avoid "window is not defined" errors
 const MapView = dynamic(() => import('./MapView'), {
@@ -20,7 +20,7 @@ interface MapClientWrapperProps {
   junctions: Junction[]
   junctionStatuses: JunctionStatus[]
   predictions: Prediction[]
-  events: Event[]
+  events: MapEvent[]
 }
 
 export default function MapClientWrapper({

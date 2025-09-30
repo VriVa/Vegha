@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic"; // App Router
+
+
 import { getEvents } from '@/lib/api'
 import type { Event, EventsResponse, EventSeverity, EventStatus } from '@/app/types/events'
 

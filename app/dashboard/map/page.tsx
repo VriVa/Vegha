@@ -1,5 +1,5 @@
-import { getJunctions, getJunctionStatus, getPredictions, getEvents } from '@/lib/api'
-import type { Junction, JunctionStatus, Prediction, Event } from './MapView'
+import { getJunctions, getJunctionStatus, getPredictions, getMapEvents } from '@/lib/api'
+import type { Junction, JunctionStatus, Prediction, MapEvent } from './MapView'
 import MapClientWrapper from './MapClientWrapper'
 
 export default async function MapPage() {
@@ -9,7 +9,7 @@ export default async function MapPage() {
       getJunctions(),
       getJunctionStatus(),
       getPredictions(),
-      getEvents()
+      getMapEvents()
     ])
 
     // Transform the data to match our component props
@@ -18,7 +18,7 @@ export default async function MapPage() {
       ? junctionStatusData 
       : [junctionStatusData]
     const predictions: Prediction[] = predictionsData.predictions || []
-    const events: Event[] = eventsData.events || eventsData || []
+    const events: MapEvent[] = eventsData.events
 
     return (
       <div className="h-screen w-full">
